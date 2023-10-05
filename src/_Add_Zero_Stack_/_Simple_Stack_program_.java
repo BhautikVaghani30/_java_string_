@@ -32,6 +32,15 @@ public class _Simple_Stack_program_ {
         }
         return false;
     }
+    private static void display(int[] s, int top) {
+        if (top == -1){
+            System.out.println("stack is empty");
+            return;
+        }
+        for (int i = top; i >= 0 ; i--) {
+            System.out.println("stack value is : " + s[i]);
+        }
+    }
 
     private static int pop(int[] s, int top) {
         if (top == -1){
@@ -41,16 +50,6 @@ public class _Simple_Stack_program_ {
         System.out.println("poped element is : "+s[top]);
         top--;
         return top;
-    }
-
-    private static void display(int[] s, int top) {
-        if (top == -1){
-            System.out.println("stack is empty");
-            return;
-        }
-        for (int i = top; i >= 0 ; i--) {
-            System.out.println("stack value is : " + s[i]);
-        }
     }
 
     private static int push(int[] s, int top, int v) {
